@@ -24,12 +24,22 @@ public class TestPlane {
 
     @Test
     public void getCapacity(){
-        assertEquals(100, plane.getcapacity());
+        assertEquals(200, plane.getcapacity());
     }
 
     @Test
     public void getIfbroken(){
         assertEquals(false, plane.getIfBroken());
+    }
+
+    @Test
+    public void getMaxWeight(){
+        assertEquals(100, plane.getMaxWeight());
+    }
+
+    @Test
+    public void getPassengerWeight(){
+        assertEquals(70, plane.getPassengerWeight());
     }
 
 

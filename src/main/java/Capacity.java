@@ -1,7 +1,7 @@
 public enum Capacity {
-    BOEING747(30),
+    BOEING747(100),
     GOENGR282(200),
-    BIRLIN292(100),
+    BIRLIN292(200),
     TURKIS272(200),
     FRANCE229(500),
     EGYPTI191(700);

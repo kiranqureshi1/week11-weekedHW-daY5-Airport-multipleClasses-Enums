@@ -2,20 +2,20 @@ import java.util.ArrayList;
 
 public class Airport {
     private ArrayList<Plane> hanger;
-    private int airpotCode;
+    private int airportCode;
     private ArrayList<Flight> flights;
     private ArrayList<Ticket> tickets;
 
     public Airport(int airportCode){
         this.hanger = new ArrayList<>();
-        this.airpotCode = airportCode;
+        this.airportCode = airportCode;
         this.flights = new ArrayList<>();
         this.tickets = new ArrayList<>();
     }
 
-    public Airport(int airpotCode, ArrayList<Plane> hanger, ArrayList<Ticket> tickets){
+    public Airport(int airportCode, ArrayList<Plane> hanger, ArrayList<Ticket> tickets){
         this.hanger = hanger;
-        this.airpotCode = airpotCode;
+        this.airportCode = airportCode;
         this.flights = new ArrayList<>();
         this.tickets = tickets;
 
@@ -59,14 +59,12 @@ public class Airport {
     }
 
 
-    public boolean canAssignPlaneToFlight(Flight flight){
+    public void canAssignPlaneToFlight(Flight flight){
         for (Plane plane : this.hanger) {
             if (flight.getPlane().getcapacity() == flight.getDistance()){
                 this.assightPlaneToFlight(plane, flight);
-                return true; //;;;;
             }
         }
-        return false;
     }
 
     public int getTotalPassengerCountInFlight(Plane plane){
@@ -83,6 +81,13 @@ public class Airport {
             }
         }
     }
+
+    public int maxWeightPlaneCanCarry(Plane plane){
+        int total = plane.getMaxWeight() - plane.getPassengerWeight();
+        return total;
+    }
+
+
 
 
 

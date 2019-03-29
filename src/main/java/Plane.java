@@ -21,7 +21,6 @@ public class Plane {
     public Plane(Capacity capacity, String airline, boolean broken, int maxWeight, int passengerWeight, ArrayList<Passanger> passangers){
         this.capacity = capacity;
         this.airline = airline;
-        this.passengers = new ArrayList<>();
         this.broken = broken;
         this.maxWeight = maxWeight;
         this.passengerWeight = passengerWeight;
@@ -43,6 +42,14 @@ public class Plane {
 
     public boolean getIfBroken(){
         return this.broken;
+    }
+
+    public int getMaxWeight(){
+        return this.maxWeight;
+    }
+
+    public int getPassengerWeight(){
+        return this.passengerWeight;
     }
 
 
