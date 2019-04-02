@@ -93,19 +93,19 @@ public class TestAirport {
         assertEquals(2, airport.getTotalPassengerCountInFlight(plane1));
     }
 
-//    @Test
-//    public void replacementPlane(){
-//        ArrayList<Plane> planes = new ArrayList<>();
-//        ArrayList<Ticket> tickets = new ArrayList<>();
-//        planes.add(plane1);
-//        planes.add(plane2);
-//        planes.add(plane3);
-//        tickets.add(ticket1);
-//        tickets.add(ticket2);
-//        airport = new Airport(456, planes, tickets);
-//        airport.replacementPlane(plane4, flight);
-//        assertEquals(2, airport.getPlaneCount());
-//    }
+    @Test
+    public void replacementPlane(){
+        ArrayList<Plane> planes = new ArrayList<>();
+        ArrayList<Ticket> tickets = new ArrayList<>();
+        planes.add(plane1);
+        planes.add(plane2);
+        planes.add(plane3);
+        tickets.add(ticket1);
+        tickets.add(ticket2);
+        airport = new Airport(456, planes, tickets);
+        airport.replacementPlane(plane4, flight);
+        assertEquals(2, airport.getPlaneCount());
+    }
 
 
     @Test

@@ -59,27 +59,29 @@ public class Airport {
     }
 
 
-    public void canAssignPlaneToFlight(Flight flight){
+    public Plane canAssignPlaneToFlight(Flight flight){
         for (Plane plane : this.hanger) {
             if (flight.getPlane().getcapacity() == flight.getDistance()){
-                this.assightPlaneToFlight(plane, flight);
+                return this.assightPlaneToFlight(plane, flight);
+
             }
-        }
+
+        } return null;
     }
 
     public int getTotalPassengerCountInFlight(Plane plane){
         return plane.getPassengerCount();
     }
 
-    public void replacementPlane(Plane planeA, Flight flight){
+    public boolean replacementPlane(Plane planeA, Flight flight){
         if (planeA.getIfBroken() == true){
             for (Plane plane : hanger){
                 if(plane.getcapacity() == planeA.getcapacity()){
                     this.assightPlaneToFlight(plane, flight);
-                    this.hanger.remove(plane);
+                    return this.hanger.remove(plane);
                 }
             }
-        }
+        } return false;
     }
 
     public int maxWeightPlaneCanCarry(Plane plane){
